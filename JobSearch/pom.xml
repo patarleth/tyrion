@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.arleth</groupId>
+  <artifactId>job_search</artifactId>
+  <version>local-SNAPSHOT</version>
+
+  <name>JobSearch</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <slf4j.version>1.6.1</slf4j.version>
+  </properties>
+
+  <packaging>jar</packaging>
+  
+  <dependencies>
+    <dependency> 
+      <groupId>com.google.code.morphia</groupId> 
+      <artifactId>morphia</artifactId> 
+      <version>0.99.1-SNAPSHOT</version> 
+  </dependency>   
+  </dependencies>
+  
+  <build>
+    <plugins>
+    </plugins>
+  </build>
+
+  <repositories>
+    <repository> 
+      <id>morphia.googlecode.com</id> 
+      <name>Morphia Repo at Google Code</name> 
+      <url>http://morphia.googlecode.com/svn/mavenrepo</url> 
+    </repository> 
+    
+    <repository>
+      <id>maven</id>
+      <name>maven.org Repository</name>
+      <url>http://repo1.maven.org/maven2/</url>
+    </repository>
+  </repositories>
+
+</project>
