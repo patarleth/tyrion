@@ -1,0 +1,71 @@
+@(r: org.arleth.jobs.Resume)
+
+@resume("my resume!") {
+<p class="c0"><span></span></p><a href="#" name="2a882f314cd1e58133b24efb3c9d42ab4a4376c3"></a><a href="#" name="0"></a><table cellpadding="0" cellspacing="0" class="c4"><tbody><tr class="c5"><td class="c20"><p class="c3 subtitle"><a name="h.ydgpbs5gi5fx"></a>
+
+<span>@r.getFirstName() @r.getLastName()</span></p>
+<p class="c3"><span class="c8">@r.getHome()</span></p>
+<p class="c0"><span class="c8"></span></p>
+<p class="c3"><span class="c8">T: @r.getHomePhone() &nbsp;E: @r.getEmail().getAddress()</span></p>
+<p class="c3"><span class="c8">W: @r.getWeb()</span></p>
+</td><td class="c19">
+<p class="c7 c3 c14"><span class="c2">@r.getFirstName().substring(0,1)@r.getLastName().substring(0,1)</span></p>
+</td></tr></tbody></table>
+
+<p class="c0 c13"><span></span></p>
+<a href="#" name="fb9fb93011ad78ca1e36c4c1e56fdf04d009bd67"></a><a href="#" name="1"></a>
+<table cellpadding="0" cellspacing="0" class="c4"><tbody></tbody></table>
+
+<p class="c0 c7"><span></span></p>
+<a href="#" name="f9b29a50fecb78066134d1043769c3e1171319eb"></a><a href="#" name="2"></a>
+
+<table cellpadding="0" cellspacing="0" class="c4"><tbody><tr class="c10"><td class="c12">
+
+<h1 class="c3"><a name="h.bdk8z2l14qs8"></a><span>Summary</span></h1></td>
+<td class="c15"><p class="c3"><span>@r.getSummary()</span></p></td></tr>
+
+<tr class="c10"><td class="c12"><h1 class="c3 c7"><a name="h.tu174v5z81bh"></a><span>Technical skills</span></h1></td><td class="c15">
+<p class="c3"><span>Programming: @r.getTechnicalSkills().getProgramming()</span></p>
+<p class="c3"><span>Development: @r.getTechnicalSkills().getDevelopment()</span></p>
+<p class="c3"><span>Environments: @r.getTechnicalSkills().getEnvironments()</span></p></td></tr>
+
+<tr class="c10"><td class="c12"><h1 class="c7 c3"><a name="h.o9v5mf4sf4kh"></a><span>Experience</span></h1></td>
+<td class="c15">
+@for( job <- r.getExperience().getJobs() ) {
+
+<h2 class="c3"><a name="h.j8kzwzlau0g"></a>
+
+<span>@job.getTitle(), @job.getCompany()</span></h2><h3 class="c3 c16"><a name="h.3cjaumyor3dg"></a>
+<span>@job.getCity(), @job.getState()&mdash; @job.getStart()-@job.getEnd()</span></h3>
+
+<p class="c3"><span>@job.getDescription()</span></p>
+
+<p class="c0"><span></span></p><h4 class="c3"><a name="h.ynxzb8bvihpz"></a><span>Accomplishments</span></h4>
+<ol class="c6" start="1">
+@for( acc <- job.getAccomplishments() ) {
+<li class="c1"><span>@acc</span></li>
+}
+</ol>
+
+<h2 class="c3 c9"><a name="h.127zullqm2hh"></a></h2>
+
+}
+
+</td>
+
+
+</tr>
+
+<tr class="c10"><td class="c12"><h1 class="c3"><a name="h.56y1nfgxuv"></a><span>Education</span></h1></td>
+
+<td class="c15">
+
+@for( ed <- r.getEducation().getSchools() ) {
+<h2 class="c3"><a name="h.2goo9s5pomc0"></a><span>@ed.getSchool()</span></h2><h3 class="c7 c3 c16"><a name="h.242ejkolt4y1"></a><span>@ed.getDegree() &mdash; @ed.getStart()-@ed.getEnd() &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></h3>
+}
+</td></tr>
+
+<tr class="c10"><td class="c12"><h1 class="c3"><a name="h.jdnxk0e0poir"></a><span>References</span></h1></td>
+<td class="c15"><p class="c7 c3"><span>Available upon request.</span></p></td></tr></tbody></table><p class="c0"><span></span></p><p class="c0"><span></span></p><p class="c0"><span></span></p><p class="c0"><span></span></p>
+    
+}

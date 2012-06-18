@@ -1,0 +1,27 @@
+@(loginForm: Form[JobSearch.Login], username: String, password: String, member: org.arleth.reg.Member, sessionVal: String)
+
+@import helper._
+
+@main("login") {
+
+login!<p>
+
+
+    @form(action = routes.JobSearch.login, args = 'id -> "loginForm") {
+        
+        @inputText(
+            field = loginForm("username"),
+            args = '_label -> "usename"
+        )
+        
+        @inputText(
+            field = loginForm("password"),
+            args = '_label -> "password"
+        )
+        
+        <p class="buttons">
+            <input type="submit">
+        <p>
+        
+    }
+}
