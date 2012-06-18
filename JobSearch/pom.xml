@@ -23,11 +23,43 @@
       <groupId>com.google.code.morphia</groupId> 
       <artifactId>morphia</artifactId> 
       <version>0.99.1-SNAPSHOT</version> 
-  </dependency>   
+    </dependency>   
+    <dependency>
+      <groupId>com.google.code.morphia</groupId>
+      <artifactId>morphia-logging-slf4j</artifactId>
+      <version>0.99</version>
+      <exclusions>
+        <exclusion> 
+	  <groupId>org.slf4j</groupId>
+	  <artifactId>slf4j-api</artifactId>
+        </exclusion>
+      </exclusions> 
+    </dependency>
+    <dependency> 
+      <groupId>org.slf4j</groupId> 
+      <artifactId>slf4j-api</artifactId> 
+      <version>1.6.4</version> 
+    </dependency>   
   </dependencies>
   
   <build>
     <plugins>
+      <plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>1.7</version>
+        <configuration>
+          <!-- put your configurations here -->
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 
