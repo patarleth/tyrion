@@ -4,7 +4,7 @@ package org.arleth.jobs;
  *
  * @author arleth
  */
-public class Experience {
+    public class Experience {
 
     Job[] jobs;
 

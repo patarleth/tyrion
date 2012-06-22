@@ -47,7 +47,7 @@ public class MyResume {
                     new Skill("Linux", "Ubuntu,REL", null),
                     new Skill("F5", null, null),
                     new Skill("Netbeans", null, null),
-                    new Skill("Eclpise", null, null),
+                    new Skill("Eclipse", null, null),
                     new Skill("emacs", null, null)
                 });
 

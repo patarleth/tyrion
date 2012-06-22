@@ -8,6 +8,8 @@ import com.mongodb.MongoURI;
 
 import org.arleth.jobs.MyResume;
 import org.arleth.jobs.Resume;
+import org.arleth.jobs.Skill;
+import org.arleth.jobs.SkillType;
 import org.arleth.reg.Member;
 import org.arleth.reg.MemberSupport;
 
@@ -61,6 +63,13 @@ public class Welcome {
 
         r = datastore.find(org.arleth.jobs.Resume.class).field("lastName").equal("Arleth").get();
         if (r != null) {
+            Skill[] env = r.getTechnicalSkills().getEnvironments().getSkills();
+            for( Skill s : env ) {
+                if( s.getName().equals( "Eclpise" ) ) {
+                    s.setName("Eclipse");
+                    datastore.save(r);
+                }
+            }
             println(r);
         } else {
             println("no resume found");
